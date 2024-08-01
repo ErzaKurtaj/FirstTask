@@ -3,6 +3,7 @@ import './App.css';
 import eventImage from './assets/images/eventImage.png';
 import componentsImage from './assets/images/componentsImage.jpg';
 import stateImage from './assets/images/stateImage.png';
+import Header from './components/Header/Header';
 
 const concepts = [
   {
@@ -25,24 +26,25 @@ const concepts = [
 function App() {
   return (
     <div>
-      <ul id="concepts"></ul>
-      <li className="concept">
-      <img src={concepts[0].image} alt={concepts[0].title}></img>
-      <h2>{concepts[0].title}</h2>
-      <p>{concepts[0].description}</p>
-      </li>
-      <li className="concept">
-      <img src={concepts[1].image} alt={concepts[1].title}></img>
-      <h2>{concepts[1].title}</h2>
-      <p>{concepts[1].description}</p>
-      </li>
-      <li className="concept">
-      <img src={concepts[2].image} alt={concepts[2].title}></img>
-      <h2>{concepts[2].title}</h2>
-      <p>{concepts[2].description}</p>
-      </li>
+      <Header />
+      <ul id="concepts">
+        <li className="concept">
+          <img src={concepts[0].image} alt={concepts[0].title} />
+          <h2>{concepts[0].title}</h2>
+          <p>{concepts[0].description}</p>
+        </li>
+        <li className="concept">
+          <img src={concepts[1].image} alt={concepts[1].title} />
+          <h2>{concepts[1].title}</h2>
+          <p>{concepts[1].description}</p>
+        </li>
+        <li className="concept">
+          <img src={concepts[2].image} alt={concepts[2].title} />
+          <h2>{concepts[2].title}</h2>
+          <p>{concepts[2].description}</p>
+        </li>
+      </ul>
     </div>
-    
   );
 }
 
